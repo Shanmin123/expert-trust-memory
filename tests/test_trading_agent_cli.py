@@ -390,7 +390,7 @@ def test_pyproject_declares_documented_install_extras():
     text = pyproject.read_text(encoding="utf-8")
 
     assert "dependencies = [" in text
-    for dependency in ('"pandas>=2.2"', '"numpy>=1.23,<2"', '"requests>=2.31"', '"pyarrow>=18.0"'):
+    for dependency in ('"pandas>=2.2,<3"', '"numpy>=1.23,<2"', '"requests>=2.31"', '"pyarrow>=18.0,<26"'):
         assert dependency in text
     assert "[project.optional-dependencies]" in text
     assert "dev = [" in text
