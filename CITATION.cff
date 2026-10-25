@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the dissertation below."
+title: "expert-trust-memory"
+authors:
+  - family-names: Sun
+    given-names: Shanmin
+license: MIT
+repository-code: "https://github.com/Shanmin123/expert-trust-memory"
+preferred-citation:
+  type: thesis
+  title: "Can a Trading Agent Learn When to Trust Its Experts? Expert-Trust Memory and Statistical Verification"
+  authors:
+    - family-names: Sun
+      given-names: Shanmin
+      affiliation: University of Edinburgh
+  thesis-type: "MSc dissertation"
+  institution:
+    name: "University of Edinburgh, School of Informatics"
+  year: 2026
