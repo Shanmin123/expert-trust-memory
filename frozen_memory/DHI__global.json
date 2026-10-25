@@ -1,0 +1,44 @@
+{
+ "cards": [
+  {
+   "count": 2226,
+   "ew_mean": 0.059193936067958704,
+   "ew_var": 0.012857637519487182,
+   "expert_id": "fundamental",
+   "hits": 1235,
+   "market_state": "global",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 1125,
+   "ew_mean": -0.04557306592121358,
+   "ew_var": 0.009556196294789761,
+   "expert_id": "news",
+   "hits": 595,
+   "market_state": "global",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 2806,
+   "ew_mean": 0.02052629825422878,
+   "ew_var": 0.01637399428717127,
+   "expert_id": "technical",
+   "hits": 1489,
+   "market_state": "global",
+   "reflection_delta": 0.0
+  }
+ ],
+ "certified_cells": [],
+ "certified_only": true,
+ "frozen": true,
+ "frozen_at": "2023-12-31",
+ "hash_sha256": "efed82a1f7f68ca1a9b0e7bf037a6b2e83c9060663b68f5dfb834df20ff1bb54",
+ "min_support": 20,
+ "scope": "global",
+ "shrink_to_global": false,
+ "standardize": true,
+ "status": "frozen",
+ "temperature": 0.5,
+ "type": "expert_scorecard",
+ "use_reflection": true
+}

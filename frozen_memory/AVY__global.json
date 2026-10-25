@@ -1,0 +1,49 @@
+{
+ "cards": [
+  {
+   "count": 1119,
+   "ew_mean": -0.020896478970562873,
+   "ew_var": 0.0035258808325169585,
+   "expert_id": "fundamental",
+   "hits": 410,
+   "market_state": "global",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 688,
+   "ew_mean": 0.0038860470451697257,
+   "ew_var": 0.0042047219206703765,
+   "expert_id": "news",
+   "hits": 391,
+   "market_state": "global",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 2811,
+   "ew_mean": -0.00684346803413141,
+   "ew_var": 0.0036638246319623453,
+   "expert_id": "technical",
+   "hits": 1403,
+   "market_state": "global",
+   "reflection_delta": 0.0
+  }
+ ],
+ "certified_cells": [],
+ "certified_only": true,
+ "frozen": true,
+ "frozen_at": "2023-12-31",
+ "half_life": 63.0,
+ "hash_sha256": "4bf393022e772e1bdc0e191112800cde4c2f473248b559d77afe1ea455d64c6d",
+ "min_support": 20,
+ "overlap": 21,
+ "scope": "global",
+ "score_mode": "ewvar",
+ "shrink_to_global": false,
+ "shrinkage": "none",
+ "standardize": true,
+ "status": "frozen",
+ "temperature": 0.5,
+ "type": "expert_scorecard",
+ "use_reflection": true,
+ "variance_penalty": 1.0
+}

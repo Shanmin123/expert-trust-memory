@@ -1,0 +1,62 @@
+{
+ "cards": [
+  {
+   "count": 2273,
+   "ew_mean": 0.033028189206431496,
+   "ew_var": 0.0019038222744182352,
+   "expert_id": "fundamental",
+   "hits": 1604,
+   "market_state": "global",
+   "reflection_delta": 0.1
+  },
+  {
+   "count": 371,
+   "ew_mean": -0.013433448642601225,
+   "ew_var": 0.008200308071214317,
+   "expert_id": "news",
+   "hits": 200,
+   "market_state": "global",
+   "reflection_delta": -0.09999999999999999
+  },
+  {
+   "count": 2826,
+   "ew_mean": 0.011181616500829869,
+   "ew_var": 0.0029652646575755786,
+   "expert_id": "technical",
+   "hits": 1643,
+   "market_state": "global",
+   "reflection_delta": -0.1
+  }
+ ],
+ "certified_cells": [
+  [
+   "global",
+   "fundamental"
+  ],
+  [
+   "global",
+   "news"
+  ],
+  [
+   "global",
+   "technical"
+  ]
+ ],
+ "certified_only": true,
+ "frozen": true,
+ "frozen_at": "2023-12-31",
+ "half_life": 63.0,
+ "hash_sha256": "910aef6e755bd97d6baf1a053b23d52e605c894ef4f6d3ba5cbe0eac402e0698",
+ "min_support": 20,
+ "overlap": 21,
+ "scope": "global",
+ "score_mode": "ewvar",
+ "shrink_to_global": false,
+ "shrinkage": "none",
+ "standardize": true,
+ "status": "frozen",
+ "temperature": 0.5,
+ "type": "expert_scorecard",
+ "use_reflection": true,
+ "variance_penalty": 1.0
+}

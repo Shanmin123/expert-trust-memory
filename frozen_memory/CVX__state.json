@@ -1,0 +1,116 @@
+{
+ "cards": [
+  {
+   "count": 7,
+   "ew_mean": -0.051576269069483364,
+   "ew_var": 0.00011238145875798925,
+   "expert_id": "fundamental",
+   "hits": 1,
+   "market_state": "down_calm",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 9,
+   "ew_mean": -0.0496716866504875,
+   "ew_var": 0.0002480303394889023,
+   "expert_id": "technical",
+   "hits": 4,
+   "market_state": "down_calm",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 474,
+   "ew_mean": -0.003356514869426423,
+   "ew_var": 0.008314936127569669,
+   "expert_id": "fundamental",
+   "hits": 210,
+   "market_state": "down_stress",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 74,
+   "ew_mean": -0.006205055782887021,
+   "ew_var": 0.011510622239538647,
+   "expert_id": "news",
+   "hits": 36,
+   "market_state": "down_stress",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 466,
+   "ew_mean": -0.028052716088833387,
+   "ew_var": 0.0087463649966853,
+   "expert_id": "technical",
+   "hits": 183,
+   "market_state": "down_stress",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 960,
+   "ew_mean": -0.010548696198649038,
+   "ew_var": 0.003927388182690177,
+   "expert_id": "fundamental",
+   "hits": 475,
+   "market_state": "up_calm",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 218,
+   "ew_mean": -0.004240251469293686,
+   "ew_var": 0.0036054367324495516,
+   "expert_id": "news",
+   "hits": 91,
+   "market_state": "up_calm",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 1383,
+   "ew_mean": -0.015202443565335958,
+   "ew_var": 0.0037687662651616632,
+   "expert_id": "technical",
+   "hits": 664,
+   "market_state": "up_calm",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 716,
+   "ew_mean": -0.022425004624759434,
+   "ew_var": 0.01303990384953358,
+   "expert_id": "fundamental",
+   "hits": 375,
+   "market_state": "up_stress",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 173,
+   "ew_mean": 0.03455951113077995,
+   "ew_var": 0.013541840082730428,
+   "expert_id": "news",
+   "hits": 108,
+   "market_state": "up_stress",
+   "reflection_delta": 0.0
+  },
+  {
+   "count": 926,
+   "ew_mean": 0.035140641078312926,
+   "ew_var": 0.01340185429510353,
+   "expert_id": "technical",
+   "hits": 435,
+   "market_state": "up_stress",
+   "reflection_delta": 0.0
+  }
+ ],
+ "certified_cells": [],
+ "certified_only": true,
+ "frozen": true,
+ "frozen_at": "2023-12-31",
+ "hash_sha256": "e710416016f63a2f9f7a5ba7f229636c2d8c32a1955071cbbdb29135519fac56",
+ "min_support": 20,
+ "scope": "state",
+ "shrink_to_global": false,
+ "standardize": true,
+ "status": "frozen",
+ "temperature": 0.5,
+ "type": "expert_scorecard",
+ "use_reflection": true
+}
