@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+
+# Inputs and outputs that are too large or cannot be redistributed (see README, "Data").
+# Anchored, so the source package src/trading_agent/data/ is not caught.
+# These carry no trailing slash on purpose: `git check-ignore` does not match a
+# trailing-slash pattern against a directory that does not exist, and a fresh
+# checkout has none of them.
+/data
+/build
+/dist
+/external
+reports/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.bak
+
+# Local tool and editor state
+/.agents
+/.claude
+/.gemini
+/.idea
+/.qoder
+/.vscode
+/.code-review-graph
+/.codex_runtime
+skills-lock.json

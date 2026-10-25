@@ -1,0 +1,96 @@
+{
+  "schema_version": "main-walk-forward-protocol/v1",
+  "created_for": "regime_conditioned_expert_reflection_main_experiment",
+  "data_scope": {
+    "finsaber_root": "data/finsaber/sp500_2000_2025_parquet",
+    "factor_artifact_manifest": "data/qlib_pipeline_manifest_2004_2025_10names.json",
+    "factor_artifact_span": {
+      "start": "2004-01-02",
+      "end": "2025-12-31"
+    },
+    "universe": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "GOOG",
+      "GOOGL",
+      "META",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "TSLA"
+    ]
+  },
+  "reserved_test_periods": [
+    {
+      "name": "gfc_crisis_test",
+      "start": "2008-01-02",
+      "end": "2009-06-30",
+      "rationale": "Reserved high-volatility financial crisis test window; not used for diagnostics."
+    },
+    {
+      "name": "covid_crisis_test",
+      "start": "2020-02-03",
+      "end": "2020-06-30",
+      "rationale": "Reserved abrupt crisis test window; not used for diagnostics."
+    },
+    {
+      "name": "recent_holdout_test",
+      "start": "2024-01-02",
+      "end": "2025-12-31",
+      "rationale": "Reserved most-recent holdout; not used for diagnostics or configuration search."
+    }
+  ],
+  "diagnostic_windows": [
+    {
+      "name": "heuristic_data_path_diagnostic",
+      "start": "2022-01-03",
+      "end": "2023-12-29",
+      "role": "diagnostic_or_validation_only",
+      "prohibited_as_test": true,
+      "artifact": "reports/real_data_diagnostic_2022_2023_heuristic_qlib.json"
+    }
+  ],
+  "protocol_invariants": {
+    "embargo_trading_days": 5,
+    "minimum_non_diagnostic_embargo_trading_days": 5,
+    "market_state_source": "MarketStateClassifier",
+    "memory_key": "expert_id x market_state",
+    "test_reflection": false,
+    "test_windows_used_once": true,
+    "diagnostic_windows_prohibited_as_test": true
+  },
+  "transaction_cost_protocol": {
+    "model": "bps_per_side_on_traded_notional",
+    "headline_bps_per_side": 10.0,
+    "sensitivity_bps_per_side": 25.0,
+    "arm_identical": true,
+    "summary_reports_net_of": "headline_bps_per_side",
+    "sensitivity_reports_required": true
+  },
+  "backend_decision_required": {
+    "expert_backend_for_main": "openai",
+    "reflection_backend_for_main": "deterministic_primary_with_llm_ablation",
+    "llm_reflection_role": "ablation_or_extension",
+    "decision_note": "The heuristic backend validates data wiring only. Main experiments require a short LLM expert liveness diagnostic. Reflection is deterministic in the primary protocol for reproducibility; LLM reflection may be reported as a separate ablation."
+  },
+  "technical_indicator_decision": {
+    "decision": "skip_for_main_experiment",
+    "optional_indicators": [
+      "RSI",
+      "MACD",
+      "moving_average_gap",
+      "bollinger_percent_b"
+    ],
+    "rationale": "Momentum, reversal, and low-volatility signal families already span the information these indicators carry; adding prompt fields now would require revalidating the final expert context before liveness."
+  },
+  "news_sentiment_decision": {
+    "decision": "skip_llm_item_sentiment_for_main_experiment",
+    "main_news_expert_inputs": [
+      "news coverage",
+      "attention novelty",
+      "data quality"
+    ],
+    "rationale": "The primary experiment should keep the news expert on already-validated structured news signals; LLM item-level sentiment is reserved for an appendix or future extension so it does not add an unvalidated variable before liveness."
+  }
+}

@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trading-agent"
+version = "0.1.0"
+description = "Expert-trust memory: statistically verified, learned weights for a three-expert trading committee"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shanmin Sun" }]
+requires-python = ">=3.10"
+dependencies = [
+    # The results were produced on pandas 2.3. Capped below 3, which changes default dtypes.
+    "pandas>=2.2,<3",
+    "numpy>=1.23,<2",
+    "requests>=2.31",
+    # pyarrow 26 requires NumPy 2, which the numpy pin above excludes.
+    "pyarrow>=18.0,<26",
+    # TradingAgents-parity technical indicators (close-based subset); the
+    # context builder degrades gracefully if it is absent.
+    "stockstats>=0.6",
+    # Imported by FINSABER's backtest package, which trading_agent loads (see _bootstrap.py).
+    "tqdm>=4.60",
+    # TF-IDF cosine for the filing-change signal. Without it that signal silently falls
+    # back to Jaccard, which is a different input to the fundamental expert.
+    "scikit-learn>=1.3",
+]
+
+[project.urls]
+Repository = "https://github.com/Shanmin123/expert-trust-memory"
+
+[project.scripts]
+trading-agent = "trading_agent.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    # The order-submission and IB news tests build real ib_async objects.
+    "ib_async>=2.1,<3",
+]
+paper = [
+    "ib_async>=2.1,<3",
+]
+llm = [
+    "openai>=1.0",
+]
+research = [
+    "pandas-ta-classic>=0.3.54",
+    "lightgbm>=4.5",
+    "lxml>=5.0",
+    "huggingface_hub>=1.0",
+    "datasets>=4.0",
+    "matplotlib>=3.8",
+    "openpyxl>=3.1",
+    "skfolio>=0.20",
+    "alphalens-reloaded>=0.4",
+    "quantstats>=0.0.81",
+    "scipy>=1.10",
+    "yfinance>=0.2",
+    "toml>=0.10",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
